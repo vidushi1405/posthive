@@ -13,10 +13,10 @@ export default function AuthLayout({ children, title, subtitle }) {
 
       {/* Main Content */}
       <div className="max-w-md w-full space-y-8 relative z-10">
-        {/* Header */}
+        {/* Header (POSTIFY changed to POSTHIVE) */}
         <div className="text-center">
           <Link to="/">
-            <h1 className="text-4xl font-tangerine font-bold text-white mb-2">Postify</h1>
+            <h1 className="text-4xl font-tangerine font-bold text-white mb-2">Posthive</h1>
           </Link>
           <p className="text-xs tracking-[0.3em] uppercase font-poppins font-medium text-gray-400 mb-8">
             The platform for your thoughts

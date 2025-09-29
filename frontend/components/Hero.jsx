@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-black grid-bg flex items-center justify-center">
+    <section className="relative min-h-screen bg-black flex items-center justify-center">
       {/* Central Text Content */}
       <div className="flex flex-col items-center justify-center text-center relative z-10 px-4 py-20">
         <h1 className="!text-7xl sm:!text-8xl md:!text-9xl font-tangerine text-white leading-none tracking-tight">
@@ -13,7 +13,7 @@ export default function Hero() {
           The blogging platform for your next big idea.
         </p>
 
-        {/* Buttons */}
+        {/* Buttons (Original styling maintained for dark background) */}
         <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <Link to="/signin">
             <Button size="lg" className="bg-black text-white hover:bg-gray-800">
@@ -28,7 +28,7 @@ export default function Hero() {
         </div>
       </div>
       
-      {/* Optional: Add a simple glow effect */}
+      {/* Reintroducing subtle glow effects for color mixing on black background */}
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute top-[20%] left-[20%] w-[500px] h-[500px] bg-indigo-500 rounded-full blur-3xl mix-blend-multiply" />
         <div className="absolute bottom-[20%] right-[20%] w-[500px] h-[500px] bg-pink-500 rounded-full blur-3xl mix-blend-multiply" />

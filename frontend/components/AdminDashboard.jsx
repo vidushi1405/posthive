@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -22,17 +20,13 @@ export default function AdminDashboard() {
       try {
         const userData = await api.getProfile();
         if (userData.role !== 'admin') {
-          navigate("/"); // Redirect non-admins
+          navigate("/");
           return;
         }
 
         const allBlogs = await api.getAllBlogs();
         setBlogs(allBlogs);
 
-        // NOTE: A new API endpoint would be needed to fetch all users.
-        // For now, let's assume getProfile returns all users for an admin.
-        // Or you can create a new route in the backend: `router.get('/users/all', verifyAccessToken, verifyAdmin, authController.getAllUsers);`
-        // For this example, let's just use a placeholder.
         const allUsers = [{ name: userData.name, email: userData.email, role: userData.role }];
         setUsers(allUsers);
 
@@ -113,7 +107,6 @@ export default function AdminDashboard() {
             </CardContent>
           </Card>
 
-          {/* Users List - Requires new backend endpoint */}
           <Card className="bg-white border-0 shadow-lg">
             <CardHeader>
               <CardTitle className="text-xl font-serif text-black">All Users</CardTitle>
